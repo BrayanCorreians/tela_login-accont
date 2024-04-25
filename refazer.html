@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='refazer.css'>
+    <script src='main.js'></script>
+
+</head>
+<body>
+<div class="container">
+    <h2>REFAZER SENHA</h2>
+    <form id="loginForm">
+        <label for="username">ESCREVA AQUI SUA NOVA SENHA</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">REPITA SUA NOVA SENHA:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Login">
+    </form>
+    <a href="refazer.html">
+</form>
+    <p id="errorMessage" class="error"></p>
+</div>
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username === "user" && password === "password") {
+            alert("Login successful!");
+        } else {
+            document.getElementById("errorMessage").textContent = "Retorne a pagina anterior e reescreva sua nova senha :)";
+        }
+    });
+
+    
+</script>
+
+</html>
+
+</body>
+</html>
